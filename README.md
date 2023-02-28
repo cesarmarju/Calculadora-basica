@@ -1,55 +1,98 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="stilo.css">
-</head>
-<body>
-    
-        <div class="calculator">
-        
-          <div class="buttons">
-                     
-                <div class="num-container">
-                    <input type="text" id="display" placeholder="0">
-                </div>
-                <div class="num-container">
-                    <button class="function" id="clear" onclick="resetear()">C</button>
-                    <button class="number" id="eight" onclick="numeros(8)">8</button>
-                    <button class="number" id="nine" onclick="numeros(9)">9</button>
-                    <button class="operator" id="multiply" onclick="numeros('*')">x</button>
-                </div>
-                <div class="num-container">
-                    <button class="number" id="seven" onclick="numeros(7)">7</button>
-                    <button class="number" id="eight" onclick="numeros(8)">8</button>
-                    <button class="number" id="nine" onclick="numeros(9)">9</button>
-                    <button class="operator" id="multiply" onclick="numeros('*')">x</button>
-                </div>
-                <div class="num-container">
-                    <button class="number" id="four" onclick="numeros(4)">4</button>
-                    <button class="number" id="five" onclick="numeros(5)">5</button>
-                    <button class="number" id="six" onclick="numeros(6)">6</button>
-                    <button class="operator" id="subtract" onclick="numeros('-')">-</button>
-                </div>
-                <div class="num-container">
-                    <button class="number" id="one" onclick="numeros(1)">1</button>
-                    <button class="number" id="two" onclick="numeros(2)">2</button>
-                    <button class="number" id="three" onclick="numeros(3)">3</button>
-                    <button class="operator" id="add"onclick="numeros('+')">+</button>
-                </div>
-                <div class="num-container">
-                    
-                    <button class="operator" id="decimal"onclick="numeros(00)">00</button>
-                    <button class="operator" id="zero" onclick="numeros(0)">0</button>
-                    <button class="operator" id="decimal"onclick="numeros('.')">.</button>
-                    <button class="operator" id="equals" onclick="operacion()">=</button>
-                </div>
-            </div>
-        </div>
-    
-    </body>
-    <script src="main.js"></script>
-    </html>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+  height: 450%;
+  background-color: #141212;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.num-container{
+    width: 150%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgba(255, 0, 255, 0);
+}
+
+.calculator {
+    width: 370px;
+    height: 600%;
+    margin: 10px auto;
+    text-align: center;
+    font-family: sans-serif;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    height: 70px;
+    font-size: 25px;
+    text-align: right;
+    padding-right: 10px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: none;
+    background-color: rgba(238, 238, 238, 0.295);
+
+  }
+  
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  button {
+    width: 100%;
+    height: 70px;
+    font-size: 20px;
+    border: 1px solid rgb(29, 25, 25);
+    background-color: rgba(29, 25, 25);
+    color: #fff;
+    outline: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  
+  .function{
+    background-color:rgba(221, 221, 221, 0.411);
+    font-size: 25px;
+    height: 60px;
+  }
+  .operator{
+    background-color:rgba(29, 25,25);
+    font-size: 30px;
+    height: 70px;
+  }
+  
+  #clear{
+    width: 100%;
+    height: 70px;
+    font-size: 20px;
+    background-color: rgba(29,25,25);
+    outline: none;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+  
+  #equals {
+    background-color: rgb(255, 51, 0);
+    color: #fff;
+    height: 70px;
+    border-radius: 100px;
+  }
+
