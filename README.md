@@ -25,3 +25,4 @@ cout<< "Indique el segundo numero de la operacion:"<<endl;
 cin>>b;
 if
 }
+Kdndnxncmdmdmmsna
